@@ -1,0 +1,2 @@
+# FFmpegPlayer
+这是一个使用RTMP协议拉流的Demo，音视频解码使用FFmpeg
