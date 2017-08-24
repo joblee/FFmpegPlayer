@@ -250,6 +250,7 @@ void audioQueueIsRunningCallback(void *inClientData, AudioQueueRef inAQ,
                     bufferStartTime.mSampleTime = packet->dts * _audioCodecContext->frame_size;
                     bufferStartTime.mFlags = kAudioTimeStampSampleTimeValid;
                 }
+                
                 //copy到缓冲区
                 memcpy((uint8_t *)buffer->mAudioData + buffer->mAudioDataByteSize, packet->data, packet->size);
                 buffer->mPacketDescriptions[buffer->mPacketDescriptionCount].mStartOffset = buffer->mAudioDataByteSize;
